@@ -273,6 +273,7 @@
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "frmEditPlan";
+            this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "แก้ไขข้อมูลห้อง";
             this.Load += new System.EventHandler(this.frmEditPlan_Load);

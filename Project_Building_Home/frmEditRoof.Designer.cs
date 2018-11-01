@@ -41,27 +41,30 @@
             this.label3 = new System.Windows.Forms.Label();
             this.txtRoofName = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.btnDel = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // button2
             // 
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(181, 197);
+            this.button2.Location = new System.Drawing.Point(249, 197);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(125, 45);
+            this.button2.Size = new System.Drawing.Size(80, 45);
             this.button2.TabIndex = 65;
             this.button2.Text = "ยกเลิก";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button1
             // 
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(40, 197);
+            this.button1.Location = new System.Drawing.Point(16, 197);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(125, 45);
+            this.button1.Size = new System.Drawing.Size(112, 45);
             this.button1.TabIndex = 64;
             this.button1.Text = "บันทึก";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // label8
             // 
@@ -165,11 +168,23 @@
             this.label1.TabIndex = 54;
             this.label1.Text = "ชื่อหลังคา";
             // 
+            // btnDel
+            // 
+            this.btnDel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDel.Location = new System.Drawing.Point(161, 197);
+            this.btnDel.Name = "btnDel";
+            this.btnDel.Size = new System.Drawing.Size(78, 45);
+            this.btnDel.TabIndex = 66;
+            this.btnDel.Text = "ลบ";
+            this.btnDel.UseVisualStyleBackColor = true;
+            this.btnDel.Click += new System.EventHandler(this.btnDel_Click);
+            // 
             // frmEditRoof
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(341, 257);
+            this.Controls.Add(this.btnDel);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label8);
@@ -186,8 +201,10 @@
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "frmEditRoof";
+            this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "แก้ไขหลังคา";
+            this.Load += new System.EventHandler(this.frmEditRoof_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -207,5 +224,6 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox txtRoofName;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button btnDel;
     }
 }

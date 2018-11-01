@@ -52,6 +52,7 @@
             this.button2.TabIndex = 53;
             this.button2.Text = "ยกเลิก";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button1
             // 
@@ -62,6 +63,7 @@
             this.button1.TabIndex = 52;
             this.button1.Text = "บันทึก";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // label8
             // 
@@ -92,6 +94,7 @@
             this.cboDirection.Size = new System.Drawing.Size(197, 28);
             this.cboDirection.TabIndex = 50;
             this.cboDirection.Text = "N";
+            this.cboDirection.KeyDown += new System.Windows.Forms.KeyEventHandler(this.cboDirection_KeyDown);
             // 
             // txtPower
             // 
@@ -186,8 +189,10 @@
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "frmAddRoof";
+            this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "เพิ่มหลังคา";
+            this.Load += new System.EventHandler(this.frmAddRoof_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

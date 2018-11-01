@@ -263,6 +263,7 @@
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "frmAddPlan";
+            this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "พื้นที่ห้อง";
             this.Load += new System.EventHandler(this.frmAddPlan_Load);

@@ -63,6 +63,7 @@
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.Column1 = new System.Windows.Forms.DataGridViewButtonColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.Roof_id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -72,16 +73,18 @@
             this.btnAddRoom = new System.Windows.Forms.Button();
             this.label16 = new System.Windows.Forms.Label();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.btnAddWall = new System.Windows.Forms.Button();
+            this.label17 = new System.Windows.Forms.Label();
             this.Column8 = new System.Windows.Forms.DataGridViewButtonColumn();
             this.Column9 = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.Column15 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column16 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column12 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column13 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column14 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.button1 = new System.Windows.Forms.Button();
-            this.label17 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -301,6 +304,7 @@
             this.btnExit.TabIndex = 39;
             this.btnExit.Text = "ออก";
             this.btnExit.UseVisualStyleBackColor = true;
+            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
             // label4
             // 
@@ -440,6 +444,7 @@
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column1,
             this.Column2,
+            this.Roof_id,
             this.Column3,
             this.Column4,
             this.Column5,
@@ -453,6 +458,7 @@
             this.dataGridView1.RowTemplate.Height = 30;
             this.dataGridView1.Size = new System.Drawing.Size(736, 307);
             this.dataGridView1.TabIndex = 44;
+            this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
             // 
             // Column1
             // 
@@ -473,9 +479,18 @@
             this.Column2.Name = "Column2";
             this.Column2.Width = 60;
             // 
+            // Roof_id
+            // 
+            this.Roof_id.DataPropertyName = "Roof_id";
+            this.Roof_id.HeaderText = "Roof_id";
+            this.Roof_id.Name = "Roof_id";
+            this.Roof_id.Visible = false;
+            this.Roof_id.Width = 90;
+            // 
             // Column3
             // 
             this.Column3.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.Column3.DataPropertyName = "Roof_name";
             this.Column3.HeaderText = "ชื่อวัสดุประกอบ";
             this.Column3.Name = "Column3";
             this.Column3.Width = 120;
@@ -483,6 +498,7 @@
             // Column4
             // 
             this.Column4.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.Column4.DataPropertyName = "Area";
             this.Column4.HeaderText = "พื้นที่";
             this.Column4.Name = "Column4";
             this.Column4.Width = 80;
@@ -490,6 +506,7 @@
             // Column5
             // 
             this.Column5.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.Column5.DataPropertyName = "Direction";
             this.Column5.HeaderText = "ทิศ";
             this.Column5.Name = "Column5";
             this.Column5.Width = 80;
@@ -497,6 +514,7 @@
             // Column6
             // 
             this.Column6.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.Column6.DataPropertyName = "Slope";
             this.Column6.HeaderText = "ความลาด";
             this.Column6.Name = "Column6";
             this.Column6.Width = 80;
@@ -504,6 +522,7 @@
             // Column7
             // 
             this.Column7.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.Column7.DataPropertyName = "Power";
             this.Column7.HeaderText = "หน่วยพลังงาน (W/ตารางเมตร)";
             this.Column7.Name = "Column7";
             this.Column7.Width = 160;
@@ -550,7 +569,9 @@
             this.dataGridView2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column8,
             this.Column9,
+            this.Column15,
             this.Column10,
+            this.Column16,
             this.Column11,
             this.Column12,
             this.Column13,
@@ -562,6 +583,41 @@
             this.dataGridView2.RowTemplate.Height = 30;
             this.dataGridView2.Size = new System.Drawing.Size(736, 314);
             this.dataGridView2.TabIndex = 45;
+            this.dataGridView2.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView2_CellClick);
+            // 
+            // panel2
+            // 
+            this.panel2.Controls.Add(this.btnAddWall);
+            this.panel2.Controls.Add(this.label17);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel2.Location = new System.Drawing.Point(0, 0);
+            this.panel2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(736, 60);
+            this.panel2.TabIndex = 44;
+            // 
+            // btnAddWall
+            // 
+            this.btnAddWall.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAddWall.Location = new System.Drawing.Point(554, 7);
+            this.btnAddWall.Margin = new System.Windows.Forms.Padding(6, 8, 6, 8);
+            this.btnAddWall.Name = "btnAddWall";
+            this.btnAddWall.Size = new System.Drawing.Size(176, 48);
+            this.btnAddWall.TabIndex = 44;
+            this.btnAddWall.Text = "เพิ่มผนัง";
+            this.btnAddWall.UseVisualStyleBackColor = true;
+            this.btnAddWall.Click += new System.EventHandler(this.btnAddWall_Click);
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label17.Location = new System.Drawing.Point(12, 14);
+            this.label17.Margin = new System.Windows.Forms.Padding(9, 0, 9, 0);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(37, 20);
+            this.label17.TabIndex = 43;
+            this.label17.Text = "ผนัง";
             // 
             // Column8
             // 
@@ -582,15 +638,30 @@
             this.Column9.Name = "Column9";
             this.Column9.Width = 60;
             // 
+            // Column15
+            // 
+            this.Column15.DataPropertyName = "Wall_id";
+            this.Column15.HeaderText = "Wall_id";
+            this.Column15.Name = "Column15";
+            this.Column15.Visible = false;
+            // 
             // Column10
             // 
             this.Column10.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.Column10.DataPropertyName = "Wall_Name";
             this.Column10.HeaderText = "ชื่อผนัง";
             this.Column10.Name = "Column10";
+            // 
+            // Column16
+            // 
+            this.Column16.DataPropertyName = "WallType";
+            this.Column16.HeaderText = "ประเภทผนัง";
+            this.Column16.Name = "Column16";
             // 
             // Column11
             // 
             this.Column11.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.Column11.DataPropertyName = "Area";
             this.Column11.HeaderText = "พื้นที่";
             this.Column11.Name = "Column11";
             this.Column11.Width = 80;
@@ -598,6 +669,7 @@
             // Column12
             // 
             this.Column12.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.Column12.DataPropertyName = "Direction";
             this.Column12.HeaderText = "ทิศ";
             this.Column12.Name = "Column12";
             this.Column12.Width = 80;
@@ -605,48 +677,17 @@
             // Column13
             // 
             this.Column13.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.Column13.DataPropertyName = "Price";
             this.Column13.HeaderText = "ค่าก่อสร้าง";
             this.Column13.Name = "Column13";
             // 
             // Column14
             // 
             this.Column14.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.Column14.DataPropertyName = "Power";
             this.Column14.HeaderText = "หน่วยพลังงาน (W/ตารางเมตร)";
             this.Column14.Name = "Column14";
             this.Column14.Width = 160;
-            // 
-            // panel2
-            // 
-            this.panel2.Controls.Add(this.button1);
-            this.panel2.Controls.Add(this.label17);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel2.Location = new System.Drawing.Point(0, 0);
-            this.panel2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(736, 60);
-            this.panel2.TabIndex = 44;
-            // 
-            // button1
-            // 
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(554, 7);
-            this.button1.Margin = new System.Windows.Forms.Padding(6, 8, 6, 8);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(176, 48);
-            this.button1.TabIndex = 44;
-            this.button1.Text = "เพิ่มผนัง";
-            this.button1.UseVisualStyleBackColor = true;
-            // 
-            // label17
-            // 
-            this.label17.AutoSize = true;
-            this.label17.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label17.Location = new System.Drawing.Point(12, 14);
-            this.label17.Margin = new System.Windows.Forms.Padding(9, 0, 9, 0);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(37, 20);
-            this.label17.TabIndex = 43;
-            this.label17.Text = "ผนัง";
             // 
             // frmRoom
             // 
@@ -658,6 +699,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "frmRoom";
+            this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ห้อง - หลังคา - ผนัง";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
@@ -717,9 +759,10 @@
         private System.Windows.Forms.DataGridView dataGridView2;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Button btnAddRoom;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnAddWall;
         private System.Windows.Forms.DataGridViewButtonColumn Column1;
         private System.Windows.Forms.DataGridViewButtonColumn Column2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Roof_id;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
@@ -727,7 +770,9 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column7;
         private System.Windows.Forms.DataGridViewButtonColumn Column8;
         private System.Windows.Forms.DataGridViewButtonColumn Column9;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column15;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column10;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column16;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column11;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column12;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column13;

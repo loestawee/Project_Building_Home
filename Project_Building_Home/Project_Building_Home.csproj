@@ -47,7 +47,20 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>home.ico</ApplicationIcon>
+  </PropertyGroup>
   <ItemGroup>
+    <Reference Include="DevExpress.Charts.v18.1.Core, Version=18.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Data.v18.1, Version=18.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Printing.v18.1.Core, Version=18.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Utils.v18.1, Version=18.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraBars.v18.1, Version=18.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraCharts.v18.1, Version=18.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraCharts.v18.1.UI, Version=18.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraCharts.v18.1.Wizard, Version=18.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraEditors.v18.1, Version=18.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraPrinting.v18.1, Version=18.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -61,6 +74,36 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Calculator\frmAddRoom.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Calculator\frmAddRoom.Designer.cs">
+      <DependentUpon>frmAddRoom.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Calculator\frmAddSub.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Calculator\frmAddSub.Designer.cs">
+      <DependentUpon>frmAddSub.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Calculator\frmAddSubRoom.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Calculator\frmAddSubRoom.Designer.cs">
+      <DependentUpon>frmAddSubRoom.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Calculator\frmCalculator.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Calculator\frmCalculator.Designer.cs">
+      <DependentUpon>frmCalculator.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Calculator\frmSelectMaterial.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Calculator\frmSelectMaterial.Designer.cs">
+      <DependentUpon>frmSelectMaterial.cs</DependentUpon>
+    </Compile>
     <Compile Include="DBClass\DBConnect.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
@@ -74,17 +117,53 @@
     <Compile Include="frmAddPlan.Designer.cs">
       <DependentUpon>frmAddPlan.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmAddRayMat.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAddRayMat.Designer.cs">
+      <DependentUpon>frmAddRayMat.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmAddRoof.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmAddRoof.Designer.cs">
       <DependentUpon>frmAddRoof.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmAddSubRay.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAddSubRay.Designer.cs">
+      <DependentUpon>frmAddSubRay.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmAddSubRoof.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAddSubRoof.Designer.cs">
+      <DependentUpon>frmAddSubRoof.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmAddSubWall.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAddSubWall.Designer.cs">
+      <DependentUpon>frmAddSubWall.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmAddSubWallMat.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAddSubWallMat.Designer.cs">
+      <DependentUpon>frmAddSubWallMat.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmAddWall.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmAddWall.Designer.cs">
       <DependentUpon>frmAddWall.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmEditMatSubWall.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmEditMatSubWall.Designer.cs">
+      <DependentUpon>frmEditMatSubWall.cs</DependentUpon>
     </Compile>
     <Compile Include="frmEditPlan.cs">
       <SubType>Form</SubType>
@@ -98,11 +177,59 @@
     <Compile Include="frmEditRoof.Designer.cs">
       <DependentUpon>frmEditRoof.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmEditSubRay.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmEditSubRay.Designer.cs">
+      <DependentUpon>frmEditSubRay.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmEditSubWall.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmEditSubWall.Designer.cs">
+      <DependentUpon>frmEditSubWall.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmEditWall.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmEditWall.Designer.cs">
       <DependentUpon>frmEditWall.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmHome.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmHome.Designer.cs">
+      <DependentUpon>frmHome.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmHomeSelect.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmHomeSelect.Designer.cs">
+      <DependentUpon>frmHomeSelect.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmHouse.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmHouse.Designer.cs">
+      <DependentUpon>frmHouse.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMain.Designer.cs">
+      <DependentUpon>frmMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmMaterial.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMaterial.Designer.cs">
+      <DependentUpon>frmMaterial.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmMatSubWall.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMatSubWall.Designer.cs">
+      <DependentUpon>frmMatSubWall.cs</DependentUpon>
     </Compile>
     <Compile Include="frmPlan.cs">
       <SubType>Form</SubType>
@@ -116,22 +243,112 @@
     <Compile Include="frmProjectView.Designer.cs">
       <DependentUpon>frmProjectView.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmRoof.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmRoof.Designer.cs">
+      <DependentUpon>frmRoof.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmRoom.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmRoom.Designer.cs">
       <DependentUpon>frmRoom.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmScope.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmScope.Designer.cs">
+      <DependentUpon>frmScope.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmSubWall.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSubWall.Designer.cs">
+      <DependentUpon>frmSubWall.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmTitle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmTitle.Designer.cs">
+      <DependentUpon>frmTitle.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Roof\frmAddComposit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Roof\frmAddComposit.Designer.cs">
+      <DependentUpon>frmAddComposit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Roof\frmAddSubComposit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Roof\frmAddSubComposit.Designer.cs">
+      <DependentUpon>frmAddSubComposit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Roof\frmMirror.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Roof\frmMirror.Designer.cs">
+      <DependentUpon>frmMirror.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Roof\frmRoof.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Roof\frmRoof.Designer.cs">
+      <DependentUpon>frmRoof.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Roof\frmSelectMaterial.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Roof\frmSelectMaterial.Designer.cs">
+      <DependentUpon>frmSelectMaterial.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Calculator\frmAddRoom.resx">
+      <DependentUpon>frmAddRoom.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Calculator\frmAddSub.resx">
+      <DependentUpon>frmAddSub.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Calculator\frmAddSubRoom.resx">
+      <DependentUpon>frmAddSubRoom.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Calculator\frmCalculator.resx">
+      <DependentUpon>frmCalculator.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Calculator\frmSelectMaterial.resx">
+      <DependentUpon>frmSelectMaterial.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmAddPlan.resx">
       <DependentUpon>frmAddPlan.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmAddRayMat.resx">
+      <DependentUpon>frmAddRayMat.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmAddRoof.resx">
       <DependentUpon>frmAddRoof.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAddSubRay.resx">
+      <DependentUpon>frmAddSubRay.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAddSubRoof.resx">
+      <DependentUpon>frmAddSubRoof.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAddSubWall.resx">
+      <DependentUpon>frmAddSubWall.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAddSubWallMat.resx">
+      <DependentUpon>frmAddSubWallMat.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAddWall.resx">
+      <DependentUpon>frmAddWall.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmEditMatSubWall.resx">
+      <DependentUpon>frmEditMatSubWall.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmEditPlan.resx">
       <DependentUpon>frmEditPlan.cs</DependentUpon>
@@ -139,15 +356,55 @@
     <EmbeddedResource Include="frmEditRoof.resx">
       <DependentUpon>frmEditRoof.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmEditSubRay.resx">
+      <DependentUpon>frmEditSubRay.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmEditSubWall.resx">
+      <DependentUpon>frmEditSubWall.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmEditWall.resx">
+      <DependentUpon>frmEditWall.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmHome.resx">
+      <DependentUpon>frmHome.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmHomeSelect.resx">
+      <DependentUpon>frmHomeSelect.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmHouse.resx">
+      <DependentUpon>frmHouse.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMain.resx">
+      <DependentUpon>frmMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMaterial.resx">
+      <DependentUpon>frmMaterial.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMatSubWall.resx">
+      <DependentUpon>frmMatSubWall.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmPlan.resx">
       <DependentUpon>frmPlan.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmProjectView.resx">
       <DependentUpon>frmProjectView.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmRoof.resx">
+      <DependentUpon>frmRoof.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmRoom.resx">
       <DependentUpon>frmRoom.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmScope.resx">
+      <DependentUpon>frmScope.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSubWall.resx">
+      <DependentUpon>frmSubWall.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmTitle.resx">
+      <DependentUpon>frmTitle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -157,6 +414,21 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Roof\frmAddComposit.resx">
+      <DependentUpon>frmAddComposit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Roof\frmAddSubComposit.resx">
+      <DependentUpon>frmAddSubComposit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Roof\frmMirror.resx">
+      <DependentUpon>frmMirror.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Roof\frmRoof.resx">
+      <DependentUpon>frmRoof.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Roof\frmSelectMaterial.resx">
+      <DependentUpon>frmSelectMaterial.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -181,6 +453,9 @@
       <ProductName>.NET Framework 3.5 SP1</ProductName>
       <Install>false</Install>
     </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="home.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

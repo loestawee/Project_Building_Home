@@ -60,6 +60,7 @@
             this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -79,6 +80,7 @@
             // 
             // splitContainer1.Panel1
             // 
+            this.splitContainer1.Panel1.Controls.Add(this.button1);
             this.splitContainer1.Panel1.Controls.Add(this.btnAddRoom);
             this.splitContainer1.Panel1.Controls.Add(this.btnNext);
             this.splitContainer1.Panel1.Controls.Add(this.btnExit);
@@ -254,6 +256,7 @@
             this.cboFloor.Size = new System.Drawing.Size(204, 28);
             this.cboFloor.TabIndex = 14;
             this.cboFloor.Text = "1";
+            this.cboFloor.SelectedIndexChanged += new System.EventHandler(this.cboFloor_SelectedIndexChanged);
             this.cboFloor.KeyDown += new System.Windows.Forms.KeyEventHandler(this.cboFloor_KeyDown);
             // 
             // txtProjectName
@@ -406,6 +409,17 @@
             this.Column7.ReadOnly = true;
             this.Column7.Width = 140;
             // 
+            // button1
+            // 
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Location = new System.Drawing.Point(861, 145);
+            this.button1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(256, 60);
+            this.button1.TabIndex = 29;
+            this.button1.Text = "เข้าสู่หน้าจอคำนวณพลังงาน";
+            this.button1.UseVisualStyleBackColor = true;
+            // 
             // frmPlan
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -416,6 +430,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "frmPlan";
+            this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "แปลนพื้น-แปลนห้อง";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
@@ -460,5 +475,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column7;
+        private System.Windows.Forms.Button button1;
     }
 }

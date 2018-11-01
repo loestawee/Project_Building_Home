@@ -64,6 +64,7 @@ namespace Project_Building_Home
 
             string Room_id = dataGridView1.Rows[e.RowIndex].Cells[2].Value.ToString();
             string Room_name = dataGridView1.Rows[e.RowIndex].Cells[3].Value.ToString();
+            string Room_type = dataGridView1.Rows[e.RowIndex].Cells[5].Value.ToString();
 
             if (e.ColumnIndex == 1)
             {
@@ -72,10 +73,18 @@ namespace Project_Building_Home
                 Load_Data();
             }else if(e.ColumnIndex == 0)
             {
-                frmRoom frm = new frmRoom(ProjectId, cboFloor.Text, Room_id, Room_name);
-                frm.ShowDialog();
-                Load_Data();
+                if (Room_type != "ไม่ใช่")
+                {
+                    frmRoom frm = new frmRoom(ProjectId, cboFloor.Text, Room_id, Room_name);
+                    frm.ShowDialog();
+                    Load_Data();
+                }
             }
+        }
+
+        private void cboFloor_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            Load_Data();
         }
 
         private void Load_Data()
